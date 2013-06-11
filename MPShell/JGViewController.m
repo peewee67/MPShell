@@ -8,6 +8,8 @@
 
 #import "JGViewController.h"
 
+#import "gamekit/gamekit.h"
+
 @interface JGViewController ()
 
 @end
