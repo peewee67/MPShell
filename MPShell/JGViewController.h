@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JGViewController : UIViewController
+#import "gamekit/gamekit.h"
+
+
+@interface JGViewController : UIViewController <GKGameCenterControllerDelegate>
+
+
+@property (nonatomic)     GKLocalPlayer *authenticatedPlayer;
 
 @end
