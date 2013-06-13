@@ -14,6 +14,12 @@
 @interface JGViewController : UIViewController <GKGameCenterControllerDelegate>
 
 
+// authenticed player is the local player (ie. ME) that has been logged into game center
 @property (nonatomic)     GKLocalPlayer *authenticatedPlayer;
+
+
+
+- (void) authenticateLocalPlayer;
+
 
 @end

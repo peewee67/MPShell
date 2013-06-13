@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self beginPlayerAuthentification];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,32 +30,41 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [self authenticateLocalPlayer];
-
-    
-    
-    [self showGameCenter];
-    
+ 
 }
 
-#pragma tag <GKGameCenterControllerDelegate> delegate and gamecenter related methods
+- (void) beginPlayerAuthentification
+{
+    if (self.authenticatedPlayer == nil)
+    {
+        [self authenticateLocalPlayer];
+    }    
+}
+
+
+
 -(void) showAuthenticationDialogWhenReasonable:(UIViewController *)viewController
 {
     [self presentViewController:viewController animated:YES completion:NULL];
 }
 
+#pragma tag <GKGameCenterControllerDelegate> delegate and gamecenter related methods
 - (void) authenticateLocalPlayer
 {
+    
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];           // create an instance of local player class
     // setting the authenticateHandler starts the authentification process
     localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        // this code can be called more that once depending on the log in state of the local player
+
         if (viewController != nil)
-        {// hanlde the asking of the player to log in
+        {// handle the asking of the player to log in
             [self showAuthenticationDialogWhenReasonable: viewController];
         }
         else if (localPlayer.isAuthenticated)
         {// store the authenticated player
             self.authenticatedPlayer=localPlayer;
+             NSLog(@"Authenticated player is %@ aka %@",localPlayer.displayName, localPlayer.alias);
         }
         else
         {// disable multi player
