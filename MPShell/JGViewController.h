@@ -11,6 +11,9 @@
 #import "gamekit/gamekit.h"
 
 
+#define MPShell_Msg_PlayerAuthenticated @"MSG_PlayerAuthenticated"
+
+
 @interface JGViewController : UIViewController <GKGameCenterControllerDelegate>
 
 

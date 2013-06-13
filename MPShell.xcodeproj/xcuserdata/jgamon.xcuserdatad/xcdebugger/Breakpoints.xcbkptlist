@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MPShell/JGViewController.m"
-         timestampString = "392754256.241493"
+         timestampString = "392831820.305718"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-showAuthenticationDialogWhenReasonable:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,12 +21,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MPShell/JGViewController.m"
-         timestampString = "392754497.406165"
+         timestampString = "392831820.305718"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
          landmarkName = "-authenticateLocalPlayer"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MPShell/JGViewController.m"
+         timestampString = "392830743.43106"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
+         landmarkName = "-PlayerHasAuthenticated:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
